@@ -4,12 +4,9 @@ import sys
 
 # 함수 정의부
 def clova_stt(clova_id, clova_secret, stype, data):
-    if stype == 'file':
-        filename = data
-        with open(filename, "rb") as fp:
-            audio = fp.read()
-    else:
-        audio =data
+   filename = "C:/Users/WIN10/Desktop/python_ai_speaker/hello.mp3"
+       fb = open(filename, 'rb)
+                 audio = fp.read()
         
     headers = {
         "X-NCP-APIGW-API-KEY-ID": clova_id,
@@ -41,5 +38,5 @@ def clova_stt(clova_id, clova_secret, stype, data):
 clova_id = "rar2f3xqjq"
 clova_secret = "GEN2mz8q0NbRbcdNySHc8D5jPJbifRANJLgqexG4"
 AUDIO_FILE = "C:/Users/WIN10/Desktop/python_ai_speaker/hello.mp3"
-text = clova_stt(clova_id, clova_secret, "file", AUDIO_FILE)
+text = clova_stt(clova_id, clova_secret, AUDIO_FILE)
 print(text)
