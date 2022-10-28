@@ -5,7 +5,7 @@ import sys
 # 함수 정의부
 def clova_stt(clova_id, clova_secret, stype, data):
    filename = "C:/Users/WIN10/Desktop/python_ai_speaker/hello.mp3"
-       fb = open(filename, 'rb)
+       fp = open(filename, 'rb')
                  audio = fp.read()
         
     headers = {
