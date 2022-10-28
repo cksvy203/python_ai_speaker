@@ -1,23 +1,4 @@
 import speech_recognition as sr
-import requests
-
-#Clova STT
-client_id = "rar2f3xqjq"
-client_secret = "GEN2mz8q0NbRbcdNySHc8D5jPJbifRANJLgqexG4"
-lang = "Kor" # 언어 코드 ( Kor )
-url = "https://naveropenapi.apigw.ntruss.com/recog/v1/stt?lang=" + lang
-data = open('C:/Users/WIN10/Desktop/python_ai_speaker/hello.mp3', 'rb')
-headers = {
-    "X-NCP-APIGW-API-KEY-ID": client_id,
-    "X-NCP-APIGW-API-KEY": client_secret,
-    "Content-Type": "application/octet-stream"
-}
-response = requests.post(url,  data=data, headers=headers)
-rescode = response.status_code
-if(rescode == 200):
-    print (response.text)
-else:
-    print("Error : " + response.text)
 
 #함수 정의부
 def get_speech():
