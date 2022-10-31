@@ -1,7 +1,7 @@
 import requests
 import json
 import sys
-import speech_recognition as sr
+from speech_recognition import speech_recognition as sr
 from playsound import playsound
 
 # 네이버 클로바 API 클라이언트 정보 입력
